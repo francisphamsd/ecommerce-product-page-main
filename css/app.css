@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  justify-content: space-between;
+  background-color: turquoise;
+  align-items: center;
+  height: 4.25rem;
+}
+.header #hamburger-icon,
+.header .cart {
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.header .cart-btn {
+  border: none;
+  background-color: transparent;
+  position: relative;
+}
+.header .cart-btn img {
+  width: 1.5rem;
+}
+.header .cart-btn .item-count {
+  position: absolute;
+  top: -25%;
+  left: -25%;
+}
+.header .logo {
+  width: 1.5rem;
+}
+
+#side-nav {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#side-nav ul {
+  background-color: white;
+  height: 100vh;
+  width: 66.7%;
+  padding: 1.5rem;
+}
+#side-nav ul #close-icon {
+  margin-bottom: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#side-nav ul #close-icon:hover {
+  transform: rotate(90deg);
+}
+#side-nav ul li {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+#side-nav ul a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1d2025;
+}
+#side-nav ul a:hover, #side-nav ul a:active {
+  color: #68707d;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 90rem) {
+  .container {
+    margin: 0 1.5rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}

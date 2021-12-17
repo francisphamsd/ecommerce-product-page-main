@@ -11,17 +11,26 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/app.css" />
 
     <title>E-commerce product page</title>
   </head>
   <body>
     <header class="header container flex">
-      <div class="header-left">
-        <img src="./images/icon-menu.svg" alt="menu hamburger" />
+      <div>
+        <img
+          id="hamburger-icon"
+          src="./images/icon-menu.svg"
+          alt="menu hamburger"
+        />
         <img src="./images/logo.svg" alt="logo" />
-        <nav>
+        <nav id="side-nav" class="hidden">
           <ul>
+            <img
+              id="close-icon"
+              src="./images/icon-close.svg"
+              alt="close icon"
+            />
             <li><a href="#">Collections</a></li>
             <li><a href="#">Men</a></li>
             <li><a href="#">Women</a></li>
@@ -31,12 +40,12 @@
         </nav>
       </div>
 
-      <div class="header-right">
-        <button>
-          <img src="./images/icon-cart.svg" alt="cart icon" />
-          <div class="item-count"></div>
+      <div>
+        <button class="cart-btn">
+          <img class="cart" src="./images/icon-cart.svg" alt="cart icon" />
+          <div class="item-count">3</div>
         </button>
-        <img src="./images/image-avatar.png" alt="acount avatar" />
+        <img class="logo" src="./images/image-avatar.png" alt="acount avatar" />
       </div>
     </header>
 
@@ -44,5 +53,7 @@
     your perfect casual wear companion. Featuring a durable rubber outer sole,
     they’ll withstand everything the weather can offer. $125.00 50% $250.00 0
     Add to cart
+
+    <script src="./script/main.js"></script>
   </body>
 </html>

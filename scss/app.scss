@@ -1,7 +1,6 @@
-@use "utilities" as *;
-@use "config" as *;
-@use "header" as *;
-@use "mobile" as *;
+@use "core" as *;
+@use "components" as *;
+@use "layout" as *;
 
 * {
   box-sizing: border-box;

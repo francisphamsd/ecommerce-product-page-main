@@ -1,0 +1,96 @@
+// There are the styles for the header, footer, the grid system, etc.
+@use "core" as *;
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.header {
+  justify-content: space-between;
+  background-color: turquoise;
+  align-items: center;
+  height: 4.25rem;
+
+  #hamburger-icon,
+  .cart {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  .cart-btn {
+    border: none;
+    background-color: transparent;
+    position: relative;
+
+    img {
+      width: 1.5rem;
+    }
+
+    .item-count {
+      position: absolute;
+      top: -25%;
+      left: -25%;
+    }
+  }
+
+  .logo {
+    width: 1.5rem;
+  }
+}
+
+#side-nav {
+  background-color: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  ul {
+    background-color: $white;
+    height: 100vh;
+    width: 66.7%;
+    padding: 1.5rem;
+
+    #close-icon {
+      margin-bottom: 3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $shade-100-vdb;
+
+      &:hover,
+      &:active {
+        color: $shade-70-dgb;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 90rem) {
+  .container {
+    margin: 0 1.5rem;
+  }
+}
