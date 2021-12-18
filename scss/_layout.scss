@@ -16,7 +16,6 @@
 
 .header {
   justify-content: space-between;
-  background-color: turquoise;
   align-items: center;
   height: 4.25rem;
 
@@ -31,19 +30,36 @@
     background-color: transparent;
     position: relative;
 
-    img {
+    .cart {
       width: 1.5rem;
     }
 
     .item-count {
       position: absolute;
       top: -25%;
-      left: -25%;
+      right: 25%;
+
+      background-color: $primary-orange;
+      color: $white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      line-height: 1;
+
+      padding: 0.1rem 0.4rem;
+      border-radius: 1rem;
     }
   }
 
-  .logo {
+  .avatar {
     width: 1.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    &:hover,
+    &:active {
+      border: 2px solid $primary-orange;
+      border-radius: 50%;
+    }
   }
 }
 

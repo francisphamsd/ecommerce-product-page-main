@@ -1,4 +1,70 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+.carousel {
+  position: relative;
+  height: 18.75rem;
+  width: 100%;
+}
+.carousel__track-container {
+  background: turquoise;
+  height: 100%;
+  position: relative;
+}
+.carousel__track {
+  list-style: none;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+}
+.carousel__button img {
+  width: 0.6rem;
+}
+.carousel__button--left {
+  left: 1rem;
+}
+.carousel__button--right {
+  right: 1rem;
+}
+.carousel__nav {
+  justify-content: center;
+  gap: 1.75rem;
+  padding: 2.5rem;
+}
+.carousel__indicator {
+  background: white;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.carousel__indicator img {
+  width: 5.5rem;
+  aspect-ratio: 1;
+}
+.carousel__indicator:hover {
+  opacity: 70%;
+}
+.carousel__indicator.current-slide {
+  border: 3px solid #ff7d1a;
+}
+
 .container {
   max-width: 90rem;
   margin: 0 auto;
@@ -14,7 +80,6 @@
 
 .header {
   justify-content: space-between;
-  background-color: turquoise;
   align-items: center;
   height: 4.25rem;
 }
@@ -28,16 +93,29 @@
   background-color: transparent;
   position: relative;
 }
-.header .cart-btn img {
+.header .cart-btn .cart {
   width: 1.5rem;
 }
 .header .cart-btn .item-count {
   position: absolute;
   top: -25%;
-  left: -25%;
+  right: 25%;
+  background-color: #ff7d1a;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.1rem 0.4rem;
+  border-radius: 1rem;
 }
-.header .logo {
+.header .avatar {
   width: 1.5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.header .avatar:hover, .header .avatar:active {
+  border: 2px solid #ff7d1a;
+  border-radius: 50%;
 }
 
 #side-nav {
